@@ -7,11 +7,8 @@ import re
 user_agent = "I am telling you PI /u/TellMePiBOT"
 r = praw.Reddit(user_agent=user_agent)
 
-user = "TellMePiBOT"
-passwd = "qwertzu"
-
 # loging in to reddit.
-r.login(user, passwd)
+r.login()
 print("Bot is logging in...")
 
 
