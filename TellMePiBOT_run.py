@@ -16,7 +16,7 @@ print("Bot is logging in...")
 
 
 # Array with names of subreddits the bot should visit.
-subs_to_check = ["test", "learnmath", "math", "cheatatmathhomework", "homeworkhelp", "askmath", "mathematics",
+subs_to_check = ["learnmath", "math", "cheatatmathhomework", "homeworkhelp", "askmath", "mathematics",
                  "mathbooks", "physicsbooks", "matheducation", "casualmath", "puremathematics", "mathpics",
                  "mathematica", "matlab", "statistics", "LaTeX"]
 # Words that a comment has to contain to tricker the bot.
@@ -34,14 +34,27 @@ cache = []
 # If a subreaddit only allows the bot to replie every X minutes but the bot replied under X
 # than this exception will be lunched. 
 
+# This methode checks if the parameter can be a float
+def canStringBeFloat(pWord):
+    try:
+        float(pWord)
+        return True
+    except ValueError:
+        return False
+
+
 # This methode checks if a comment contains any of the words in the array.
 def contains(comment):
     matched = False
     splited = comment.split()
     for word in  words_to_match:
         for split in splited:
-            # Here we remove the punctuation in the word.
-            out = "".join(c for c in split if c not in ('!','.',':'))
+            # Here we remove the punctuation in the word if the word insnt a number.
+            if not canStringBeFloat(split):
+                out = "".join(c for c in split if c not in ('!','.',':'))
+            else:
+                out = split
+
             if word == out:
                 matched = True
 
