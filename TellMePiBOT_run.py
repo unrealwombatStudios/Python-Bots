@@ -30,10 +30,6 @@ numb_of_submissions_to_check = 500
 # In the cache are IDs of comments stored where the bot already replied.
 cache = []
 
-# This methode handels an exception.
-# If a subreaddit only allows the bot to replie every X minutes but the bot replied under X
-# than this exception will be lunched. 
-
 # This methode checks if the parameter can be a float
 def canStringBeFloat(pWord):
     try:
