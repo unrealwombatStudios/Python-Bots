@@ -12,7 +12,7 @@ r.login()
 print("Bot is logging in...")
 
 
-# Array with names of subreddits the bot should visit.
+# Array with names of subreddits the bot is going to visit.
 subs_to_check = ["learnmath", "math", "cheatatmathhomework", "homeworkhelp", "askmath", "mathematics",
                  "mathbooks", "physicsbooks", "matheducation", "casualmath", "puremathematics", "mathpics",
                  "mathematica", "matlab", "statistics", "LaTeX"]
@@ -53,8 +53,7 @@ def contains(comment):
 
     return matched
 
-# This is the main methode. It checks all the comments of the submissions in the threads who are stored 
-# in the array.
+# This is the main methode. It checks all the comments of a submission.
 def run_bot():
     #For every subreddit in the array
     for subName in subs_to_check:
