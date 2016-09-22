@@ -1,1 +1,1 @@
-TellMePiBOT is a bot written in Python. The bot will reply with PI if he finds a comment where PI is mentioned. This is my very first Reddit bot.
+TellMePiBOT is a dump bot written in Python. The bot will browse the math subreddits. If he finds the word "PI" in a comment he will replie with the number PI. This is my first attempt coding a Reddit bot.
